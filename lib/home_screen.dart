@@ -1,49 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Company Profile',
-            style: Theme.of(context).textTheme.bodyLarge,
-          ),
-          actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.phone)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.login)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
-          ],
-        ),
-        body: TabBarView(
-          children: [
-            HomeSubscreen(),
-            Center(
-              child: Text("Portal Berita"),
-            ),
-          ],
-        ),
-        bottomNavigationBar: Container(
-          child: TabBar(
-            tabs: [
-              Tab(
-                icon: Icon(Icons.home),
-              ),
-              Tab(
-                icon: Icon(Icons.newspaper),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class HomeSubscreen extends StatelessWidget {
+class _HomeScreenState extends State<HomeScreen> {
   String tentangDeskripsi =
       "adalah salah satu bentuk satuan pendidikan formal yang menyelenggarakan pendidikan kejuruan pada jenjang pendidikan menengah yang mempersiapkan peserta didik terutama untuk bekerja di bidang tertentu. Siswa dapat melanjutkan pendidikan SMK setelah menyelesaikan pendidikan di tingkat Sekolah Menengah Pertama atau sederajat.";
 
@@ -198,3 +163,5 @@ class HomeSubscreen extends StatelessWidget {
     );
   }
 }
+
+
