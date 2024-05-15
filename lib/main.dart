@@ -1,5 +1,6 @@
 import 'package:company_profile/home_screen.dart';
 import 'package:company_profile/login_screen.dart';
+import 'package:company_profile/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }

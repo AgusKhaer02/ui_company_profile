@@ -15,6 +15,8 @@ class _PortalBeritaScreenState extends State<PortalBeritaScreen> {
   List<Data> listData = [];
 
   getData() {
+
+    print('masuk');
     BeritaRepository.getListBerita().then((value) {
       // jika proses await selesai dan mengembalikan datanya
       // maka masuk ke dalam proses then()

@@ -5,12 +5,16 @@ import 'package:company_profile/model/detail_berita.dart';
 import 'package:company_profile/model/list_berita.dart';
 import 'package:http/http.dart' as http;
 
-final String BASE_URL = 'https://lauwba.com/webservices';
+// final String BASE_URL = 'https://lauwba.com/webservices';
+// sebagai opsi kedua, gunakan link webservice localhost
+final String BASE_URL = 'http://192.168.18.211:8080/api';
 
 class BeritaRepository {
 
   static Future<ListBerita> getListBerita() async {
-    String url = BASE_URL + "/get_latest_news";
+    // String url = BASE_URL + "/get_latest_news";
+    String url = BASE_URL + "/berita";
+
 
     // melakukan request dengan method get
     // await = proses selanjutnya akan dijeda sampai proses request selesai
@@ -26,7 +30,8 @@ class BeritaRepository {
   }
 
   static Future<DetailBerita> getDetailBerita(String idBerita) async {
-    String url = BASE_URL + "/get_detail_news/$idBerita";
+    // String url = BASE_URL + "/get_detail_news/$idBerita";
+    String url = BASE_URL + "/berita/$idBerita";
 
     // melakukan request dengan method get
     // await = proses selanjutnya akan dijeda sampai proses request selesai

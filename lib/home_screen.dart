@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Image.network(
-                              "https://smkn4kendari.sch.id/wp-content/uploads/2021/05/RPL-760x490-1.jpg",
+                              "https://blog.maukuliah.id/wp-content/uploads/2020/03/jurusan-perangkat-lunak.jpg",
                               height: 150,
                             ),
                             SizedBox(
